@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TickLine — Backtest view</title>
+    <style>
+      body { margin: 0; padding: 12px; background: #0e0e11; font: 13px ui-sans-serif, system-ui, sans-serif; color: #a1a1aa; }
+      a { color: #a78bfa; }
+      p { margin: 0 0 10px; }
+    </style>
+  </head>
+  <body>
+    <p>BacktestView over synthetic NIFTY-like 1m data (40 sessions, simulated SL/2R trades, PDH/PDL).
+      Same component the Jupyter widget mounts. <a href="/">← single chart</a></p>
+    <div id="view"></div>
+    <script type="module" src="/src/backtest.ts"></script>
+  </body>
+</html>

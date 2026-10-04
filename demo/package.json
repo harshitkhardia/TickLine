@@ -1,0 +1,21 @@
+{
+  "name": "tickline-demo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "demo": "vite --port 5173",
+    "demo:mock": "cross-env VITE_USE_MOCK=1 vite --port 5173",
+    "demo:grid": "vite --port 5173 --open /grid.html",
+    "build": "tsc --noEmit",
+    "demo:backtest": "vite --port 5173 --open /backtest.html"
+  },
+  "dependencies": {
+    "klinecharts": "9.8.12"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "typescript": "^5.5.0",
+    "vite": "^5.4.0"
+  }
+}

@@ -1,0 +1,18 @@
+TickLine
+Copyright (c) 2026 TickLine contributors
+
+This product is built on and has a peer dependency on KLineChart, which is
+licensed under the Apache License, Version 2.0:
+
+  KLineChart
+  Copyright (c) klinecharts
+  https://github.com/klinecharts/KLineChart
+  Licensed under the Apache License, Version 2.0.
+  http://www.apache.org/licenses/LICENSE-2.0
+
+KLineChart is a peer dependency and is not redistributed as part of TickLine's
+source. Consumers install it themselves (npm install klinecharts@9.8.12).
+
+Drawing-tool geometry (v1.5 custom tools) is reimplemented from public
+specifications. No source is copied from MPL-2.0-licensed projects into this
+MIT-licensed codebase (see ARCHITECTURE.md D-T2 / §5 "License hygiene").

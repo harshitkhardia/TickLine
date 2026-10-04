@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TickLine — Demo</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <span class="brand">TickLine <em>demo</em></span>
+      <span id="data-badge" class="badge">—</span>
+      <a href="/grid.html" title="Multi-chart grid (2×2, 3×3, …)"
+         style="color: var(--accent); text-decoration: none; font-weight: 600; border: 1px solid var(--border); border-radius: 4px; padding: 3px 8px;">▦ Multi-chart grid →</a>
+      <div class="spacer"></div>
+      <select id="symbol" title="Symbol"></select>
+      <select id="period" title="Period">
+        <option value="1m">1m</option>
+        <option value="5m" selected>5m</option>
+        <option value="15m">15m</option>
+        <option value="1h">1h</option>
+        <option value="1d">1d</option>
+      </select>
+      <label class="tgl" data-ind="EMA"><input type="checkbox" checked /> EMA 20/50</label>
+      <label class="tgl" data-ind="VOL"><input type="checkbox" checked /> Volume</label>
+      <button id="clear-drawings" title="Remove all drawings">Clear</button>
+    </header>
+
+    <main class="stage">
+      <aside class="tools" id="tools"></aside>
+      <div class="chart-wrap">
+        <div id="chart"></div>
+      </div>
+    </main>
+
+    <footer class="statusbar">
+      <span id="status">ready</span>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

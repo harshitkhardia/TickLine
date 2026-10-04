@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TickLine — Multi-chart Grid</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+    <link rel="stylesheet" href="/src/grid.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <span class="brand">TickLine <em>grid</em></span>
+      <span id="data-badge" class="badge">—</span>
+      <div class="spacer"></div>
+      <div class="tools-row" id="tools"></div>
+      <button id="add-ema" title="Add EMA 20/50 to the active chart">+ EMA</button>
+      <a href="/index.html" style="color: var(--dim); text-decoration: none; margin-left:6px;">single →</a>
+    </header>
+
+    <div class="subbar">
+      <span class="label">Layout</span>
+      <div class="layouts" id="layouts"></div>
+    </div>
+
+    <div class="subbar">
+      <span class="label">Sync in layout</span>
+      <span class="pill live" id="sync-note">live — click a chart to make it active</span>
+      <div class="sync" id="sync"></div>
+    </div>
+
+    <main class="grid" id="grid"></main>
+
+    <footer class="statusbar">
+      <span id="status">ready</span>
+    </footer>
+
+    <!-- interval combobox options; the input still accepts arbitrary values like 17m -->
+    <datalist id="tf-list">
+      <option value="1m"></option><option value="3m"></option><option value="5m"></option>
+      <option value="10m"></option><option value="15m"></option><option value="17m"></option>
+      <option value="30m"></option><option value="1h"></option><option value="4h"></option>
+      <option value="1d"></option>
+    </datalist>
+
+    <script type="module" src="/src/grid.ts"></script>
+  </body>
+</html>
